@@ -1,0 +1,44 @@
+#Group Productos Usuarios
+## Todos los productos [/productos]
+### Listado de todos los productos [GET]
++ Request 200
+    Location : /productos
+
++ Response 200 (application/json)
+    [
+        {
+            status: 'ok',
+            data: [
+                {
+                    id_p: 1,
+                    nombre_p: "vino",
+                    descripcion_p: "vino descripcion",
+                    precio_p: 240.50,
+                    stock_p: 30,
+                    imagen_p: "/img/imagen1.jpg"
+                }
+            ]
+        }
+    ]
+
+#Group Productos Admin
+## Alta de productos [/productosAdmin]
+### Insertar un nuevo producto [POST]
+
++ Request 200 (application/json)
+    + Body
+        {
+            nombre_p: "vino",
+            descripcion_p: "vino descripcion",
+            precio_p: 240.50,
+            stock_p: 30,
+            imagen_p: "/img/imagen1.jpg"
+        }
+
++ Response 200 (application/json)
+    + Body
+        {
+            status: 'ok',
+            id_p: 4
+        }
+
